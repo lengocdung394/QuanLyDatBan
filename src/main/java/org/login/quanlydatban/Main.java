@@ -23,29 +23,6 @@ public class Main extends Application {
         Session session = HibernateUtils.getFactory().openSession();
 
         session.getTransaction().begin();
-//        NhanVien nv = new NhanVien();//transient
-//
-//        nv.setMaNhanVien("NV2");
-//        nv.setTenNhanVien("TPH");
-//        nv.setCccd("01399889304");
-//        nv.setSdt("0355227249");
-//        nv.setNgaySinh(LocalDate.of(2004, 9, 29));
-//        nv.setTrangThaiNhanVien(TrangThaiNhanVien.DANG_LAM);
-//        nv.setDiaChi("alo alo");
-//        nv.setGioiTinh(true);
-//
-//        session.save(nv);//persistent
-//        session.getTransaction().commit();
-//
-//        session.close();
-
-
-//        LoaiMonAn loaiMonAn = new LoaiMonAn();
-//        loaiMonAn.setTenLoaiMonAn("Goi Gaf");
-//        loaiMonAn.setMoTaLoaiMonAn("het mon goi");
-//        loaiMonAn.setMaLoaiMonAn("1234");
-//        session.save(loaiMonAn);//persistent
-//        session.getTransaction().commit();
 
         Ban ban = new Ban();
         ban.setMaBan("1235");
