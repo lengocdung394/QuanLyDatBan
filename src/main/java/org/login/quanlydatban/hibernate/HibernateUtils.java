@@ -5,10 +5,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-import org.login.quanlydatban.entity.Ban;
-import org.login.quanlydatban.entity.LoaiMonAn;
-import org.login.quanlydatban.entity.NhanVien;
-import org.login.quanlydatban.entity.TaiKhoan;
+import org.login.quanlydatban.entity.*;
 
 import java.util.Properties;
 
@@ -32,7 +29,7 @@ public class HibernateUtils {
         configuration.addAnnotatedClass(NhanVien.class);
         configuration.addAnnotatedClass(LoaiMonAn.class);
         configuration.addAnnotatedClass(Ban.class);
-
+        configuration.addAnnotatedClass(MonAn.class);
 
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties())

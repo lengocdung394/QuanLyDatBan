@@ -22,16 +22,7 @@ public class Main extends Application {
 
         Session session = HibernateUtils.getFactory().openSession();
 
-        session.getTransaction().begin();
 
-        Ban ban = new Ban();
-        ban.setMaBan("1235");
-        ban.setLoaiBan(LoaiBan.BAN_2_NGUOI);
-        ban.setKhuVuc(KhuVuc.A);
-        ban.setTrangThaiBan(TrangThaiBan.BAN_TRONG);
-
-        session.save(ban);//persistent
-        session.getTransaction().commit();
         session.close();
 
         stage.setTitle("Đăng nhập");
