@@ -30,9 +30,11 @@ public class HibernateUtils {
         configuration.addAnnotatedClass(LoaiMonAn.class);
         configuration.addAnnotatedClass(Ban.class);
         configuration.addAnnotatedClass(MonAn.class);
+        configuration.addAnnotatedClass(KhachHang.class);
+        configuration.addAnnotatedClass(PhienThongKe.class);
 
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties())
+                .applySettings(configuration.getProperties())   
                 .build();
 
         FACTORY = configuration.buildSessionFactory(registry);

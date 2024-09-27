@@ -21,8 +21,13 @@ public class Main extends Application {
         SessionFactory sessionFactory = HibernateUtils.getFactory();
 
         Session session = HibernateUtils.getFactory().openSession();
+//        session.getTransaction().begin();
 
-
+//        TaiKhoan taiKhoan = session.get(TaiKhoan.class, 1L);
+//
+//        System.out.println(taiKhoan.getNhanVien());
+//
+//        session.getTransaction().commit();
         session.close();
 
         stage.setTitle("Đăng nhập");
