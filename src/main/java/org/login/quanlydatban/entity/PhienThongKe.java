@@ -1,5 +1,7 @@
 package org.login.quanlydatban.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -13,6 +15,7 @@ public class PhienThongKe {
 
     private String chiTiet;
 
+    @CreationTimestamp
     private LocalDate thoiGianThongKe;
 
     @OneToOne
