@@ -1,9 +1,7 @@
 package org.login.quanlydatban.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -27,6 +25,8 @@ public class KhachHang {
     @Column(nullable = false)
     private String email;
 
+    @OneToMany(mappedBy = "khachHang")
+    private Set<LichDat> lichDatSet;
 
     private int diemTichLuy = 0;
 
