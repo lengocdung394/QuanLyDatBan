@@ -12,15 +12,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.login.quanlydatban.controller.DangNhapController">
    <children>
       <HBox prefHeight="350.0" prefWidth="550.0">
          <children>
-            <Pane prefHeight="350.0" prefWidth="256.0" styleClass="bg1" />
+            <Pane prefHeight="350.0" prefWidth="256.0" style="-fx-background-color: blue;" styleClass="bg1" />
             <Pane prefHeight="400.0" prefWidth="372.0">
                <children>
-                  <TextField layoutX="132.0" layoutY="161.0" prefHeight="25.0" prefWidth="173.0" />
+                  <TextField fx:id="username" layoutX="132.0" layoutY="161.0" prefHeight="25.0" prefWidth="173.0" />
                   <Label layoutX="29.0" layoutY="160.0" prefHeight="17.0" prefWidth="95.0" text="Tên đăng nhập:">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -31,14 +30,14 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button layoutX="130.0" layoutY="276.0" mnemonicParsing="false" text="Đăng nhập" />
-                  <Button layoutX="216.0" layoutY="276.0" mnemonicParsing="false" text="Thoát" />
+                  <Button layoutX="130.0" layoutY="276.0" mnemonicParsing="false" onAction="#dangNhap" text="Đăng nhập" />
+                  <Button layoutX="216.0" layoutY="276.0" mnemonicParsing="false" onAction="#thoat" text="Thoát" />
                   <ImageView fitHeight="86.0" fitWidth="87.0" layoutX="130.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@user.png" />
                      </image>
                   </ImageView>
-                  <PasswordField layoutX="132.0" layoutY="199.0" prefHeight="25.0" prefWidth="172.0" />
+                  <PasswordField fx:id="password" layoutX="132.0" layoutY="199.0" prefHeight="25.0" prefWidth="172.0" />
                   <CheckBox layoutX="132.0" layoutY="231.0" mnemonicParsing="false" text="Lưu mật khẩu" />
                </children>
             </Pane>

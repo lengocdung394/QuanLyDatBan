@@ -1,3 +1,8 @@
 .bg1 {
     -fx-background-color: white;
 }
+
+.exit-button {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}

@@ -18,19 +18,11 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("TrangDangNhap.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        SessionFactory sessionFactory = HibernateUtils.getFactory();
+//        SessionFactory sessionFactory = HibernateUtils.getFactory();
         Session session = HibernateUtils.getFactory().openSession();
+
         session.getTransaction().begin();
 
-        NhanVien nhanVien = session.get(NhanVien.class, "NV1");
-
-        PhienThongKe phienThongKe = new PhienThongKe();
-        phienThongKe.setChiTiet("okok");
-        phienThongKe.setNhanVien(nhanVien);
-
-        session.save(phienThongKe);
-
-        session.getTransaction().commit();
         session.close();
 
         stage.setTitle("Đăng nhập");
