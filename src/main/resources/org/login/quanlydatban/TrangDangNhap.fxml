@@ -10,35 +10,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.login.quanlydatban.controller.DangNhapController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.login.quanlydatban.controller.DangNhapController">
    <children>
-      <HBox prefHeight="350.0" prefWidth="550.0">
+      <HBox prefHeight="350.0" prefWidth="500.0">
          <children>
-            <Pane prefHeight="350.0" prefWidth="256.0" style="-fx-background-color: blue;" styleClass="bg1" />
-            <Pane prefHeight="400.0" prefWidth="372.0">
+            <Pane prefHeight="350.0" prefWidth="256.0" styleClass="gradient1">
                <children>
-                  <TextField fx:id="username" layoutX="132.0" layoutY="161.0" prefHeight="25.0" prefWidth="173.0" />
-                  <Label layoutX="29.0" layoutY="160.0" prefHeight="17.0" prefWidth="95.0" text="Tên đăng nhập:">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="30.0" layoutY="194.0" prefHeight="17.0" prefWidth="87.0" text="Mật khẩu:">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="130.0" layoutY="276.0" mnemonicParsing="false" onAction="#dangNhap" text="Đăng nhập" />
-                  <Button layoutX="216.0" layoutY="276.0" mnemonicParsing="false" onAction="#thoat" text="Thoát" />
-                  <ImageView fitHeight="86.0" fitWidth="87.0" layoutX="130.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView blendMode="MULTIPLY" fitHeight="252.0" fitWidth="189.0" layoutX="2.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@user.png" />
+                        <Image url="@tobologo.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="password" layoutX="132.0" layoutY="199.0" prefHeight="25.0" prefWidth="172.0" />
-                  <CheckBox layoutX="132.0" layoutY="231.0" mnemonicParsing="false" text="Lưu mật khẩu" />
+               </children></Pane>
+            <Pane prefHeight="400.0" prefWidth="372.0" styleClass="gradient2">
+               <children>
+                  <Pane layoutX="38.0" layoutY="119.0" prefHeight="212.0" prefWidth="246.0" style="-fx-background-color: white;" styleClass="round-box" />
+                  <TextField fx:id="username" layoutX="53.0" layoutY="144.0" prefHeight="25.0" prefWidth="215.0" />
+                  <Label layoutX="53.0" layoutY="127.0" prefHeight="17.0" prefWidth="95.0" text="Tên đăng nhập:" />
+                  <Label layoutX="53.0" layoutY="173.0" prefHeight="17.0" prefWidth="87.0" text="Mật khẩu:" />
+                  <Button layoutX="53.0" layoutY="252.0" mnemonicParsing="false" onAction="#dangNhap" prefHeight="25.0" prefWidth="215.0" style="-fx-background-color: ACD793;" styleClass="small-round-box" text="Đăng nhập" />
+                  <Button layoutX="53.0" layoutY="290.0" mnemonicParsing="false" onAction="#thoat" prefWidth="215.0" style="-fx-background-color: FFA62F;" styleClass="small-round-box" text="Thoát" />
+                  <PasswordField fx:id="password" layoutX="53.0" layoutY="190.0" prefHeight="25.0" prefWidth="215.0" />
+                  <CheckBox layoutX="53.0" layoutY="224.0" mnemonicParsing="false" text="Lưu mật khẩu" />
+                  <ImageView blendMode="MULTIPLY" fitHeight="120.0" fitWidth="87.0" layoutX="111.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tobologo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="276.0" layoutY="2.0" onMouseClicked="#thoat" pickOnBounds="true" preserveRatio="true" styleClass="mouse-move">
+                     <image>
+                        <Image url="@exit.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>
