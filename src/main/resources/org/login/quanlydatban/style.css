@@ -31,7 +31,3 @@
     -fx-background-color: #2980b9;
     -fx-text-fill: #ecf0f1;
 }
-
-.mouse-move:hover{
-    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
-}
